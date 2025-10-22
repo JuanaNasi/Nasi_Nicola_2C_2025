@@ -28,7 +28,7 @@ set(srcs
     #"devices/src/mpu6050.c"
     #"devices/src/buzzer.c"
     #"devices/src/l293.c"
-    #"devices/src/ADXL335.c"
+    "devices/src/ADXL335.c"
     #"devices/src/MFRC522.c"
     #"devices/src/rfid_utils.c"
     #"devices/src/max3010X.c"
