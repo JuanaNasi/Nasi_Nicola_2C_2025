@@ -17,7 +17,8 @@
  *
  * |   Date	    | Description                                    |
  * |:----------:|:-----------------------------------------------|
- * | 22/10/2025 | Creacion del documento	                     |
+ * | 22/10/2025 | Creación del documento	                     |
+ * | 29/10/2025 | Terminación de cálculo de ángulos	             |
  *
  * @author Juana Nasi (juananasi3009@gmail.com)
  * @author Josefina Nicola (josefina.nicola@ingenieria.uner.edu.ar)
