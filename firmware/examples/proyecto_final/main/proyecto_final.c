@@ -28,6 +28,7 @@
  */
 
 /*==================[inclusions]=============================================*/
+
 #include <stdio.h>
 #include <math.h>
 #include "ADXL335.h"
@@ -35,6 +36,9 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "timer_mcu.h"
+#include "l293.h"
+#include "pwm_mcu.h"
+
 /*==================[macros and definitions]=================================*/
 
 #define MEDICION_PERIODO_US 10000
@@ -48,13 +52,12 @@ TaskHandle_t mostrar_task_handle = NULL;
 
 /*==================[internal functions declaration]=========================*/
 
+void TestVibrador(void);
 float CalcularPitch(float x, float y, float z);
 float CalcularRoll(float x, float y, float z);
 
-
 /*==================[internal data definition]===============================*/
 
-bool flag_mostrar = false;
 float x_prom;
 float y_prom; 
 float z_prom;
@@ -65,6 +68,15 @@ float z_prom;
 
 /*==================[internal functions definition]==========================*/
 
+void TestVibrador(void){
+    L293Init();  // asegura que el driver esté inicializado
+
+	L293SetSpeed(MOTOR_2, 90);   // encender vibrador (0–100 = PWM)
+	vTaskDelay(pdMS_TO_TICKS(1000)); // vibra 1 segundo
+
+	L293SetSpeed(MOTOR_2, 0);    // apagar vibrador
+	vTaskDelay(pdMS_TO_TICKS(1000)); // pausa 1 segundo
+}
 
 void FuncTimer(void *param){
     vTaskNotifyGiveFromISR(medir_task_handle, pdFALSE);
@@ -93,6 +105,7 @@ void Medir(void *param){
 void Mostrar(void *param){
 	while(1){
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+		TestVibrador();
 
 		float pitch = CalcularPitch(x_prom, y_prom, z_prom);
 		float roll = CalcularRoll(x_prom, y_prom, z_prom);
@@ -125,7 +138,7 @@ float CalcularRoll(float x, float y, float z){
 
 void app_main(void)
 {
-	
+
 	ADXL335Init();
 	
 	timer_config_t timer_medicion = {
@@ -135,11 +148,9 @@ void app_main(void)
         .param_p = NULL
     };
 	TimerInit(&timer_medicion);
-
 	xTaskCreate(Medir, "Medir aceleraciones", 4096, NULL, 5, &medir_task_handle);
 	xTaskCreate(Mostrar, "Mostrar pitch y roll", 4096, NULL, 5, &mostrar_task_handle);
-
 	TimerStart(TIMER_A);
-	
+
 }
 /*==================[end of file]============================================*/
