@@ -75,6 +75,7 @@ void Medir(void *param){
 		x_prom = 0;
 		y_prom = 0;
 		z_prom = 0;
+		
 		//ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 		for (int i = 0; i < n; i++){
 			x_prom += ReadXValue()/n;
@@ -83,7 +84,7 @@ void Medir(void *param){
 			vTaskDelay(10 / portTICK_PERIOD_MS);
 		}		
 		vTaskDelay(1000 / portTICK_PERIOD_MS);
-		flag_mostrar = true;
+		vTaskNotifyGiveFromISR(mostrar_task_handle, pdFALSE);
 	}
 	
 	
@@ -92,29 +93,17 @@ void Medir(void *param){
 void Mostrar(void *param){
 	while(1){
 
-		if (flag_mostrar){
-			flag_mostrar = false;
-			//ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-
-			//Medir(NULL);
-
-
-			float pitch = CalcularPitch(x_prom, y_prom, z_prom);
-			float roll = CalcularRoll(x_prom, y_prom, z_prom);
-
-			printf("\nX: %.2f g\n", x_prom);
-			printf("Y: %.2f g\n", y_prom);
-			printf("Z: %.2f g\n", z_prom);
-			printf("\nPitch: %.2f\n", pitch);
-			printf("Roll: %.2f\n", roll);
-
-			
-			//vTaskDelay(10 / portTICK_PERIOD_MS);
-		}
 		
-		else{
-			vTaskDelay(10 / portTICK_PERIOD_MS);
-		}
+		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+
+		float pitch = CalcularPitch(x_prom, y_prom, z_prom);
+		float roll = CalcularRoll(x_prom, y_prom, z_prom);
+
+		printf("\nX: %.2f g\n", x_prom);
+		printf("Y: %.2f g\n", y_prom);
+		printf("Z: %.2f g\n", z_prom);
+		printf("\nPitch: %.2f\n", pitch);
+		printf("Roll: %.2f\n", roll);
 	}
 }
 
