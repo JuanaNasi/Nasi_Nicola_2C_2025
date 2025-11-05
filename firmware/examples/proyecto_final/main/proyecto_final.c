@@ -67,23 +67,23 @@ float z_prom;
 
 void FuncTimer(void *param){
     vTaskNotifyGiveFromISR(medir_task_handle, pdFALSE);
-	vTaskNotifyGiveFromISR(mostrar_task_handle, pdFALSE);
+	//vTaskNotifyGiveFromISR(mostrar_task_handle, pdFALSE);
 }
 
 void Medir(void *param){
 	while(1){
+		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 		x_prom = 0;
 		y_prom = 0;
 		z_prom = 0;
 		
-		//ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+		
 		for (int i = 0; i < n; i++){
 			x_prom += ReadXValue()/n;
 			y_prom += ReadYValue()/n;
 			z_prom += ReadZValue()/n;
 			vTaskDelay(10 / portTICK_PERIOD_MS);
 		}		
-		vTaskDelay(1000 / portTICK_PERIOD_MS);
 		vTaskNotifyGiveFromISR(mostrar_task_handle, pdFALSE);
 	}
 	
@@ -132,11 +132,11 @@ void app_main(void)
 	
 	timer_config_t timer_medicion = {
         .timer = TIMER_A,
-        .period = MEDICION_PERIODO_US,
+        .period = MUESTREO_PERIODO_US,
         .func_p = FuncTimer,
         .param_p = NULL
     };
-	// TimerInit(&timer_medicion);
+	TimerInit(&timer_medicion);
 
 	// timer_config_t timer_muestreo = {
     //     .timer = TIMER_B,
@@ -146,10 +146,10 @@ void app_main(void)
     // };
 	// TimerInit(&timer_muestreo);
 
-	xTaskCreate(Medir, "Medir aceleraciones", 2048, NULL, 5, &medir_task_handle);
-	xTaskCreate(Mostrar, "Mostrar pitch y roll", 2048, NULL, 5, &mostrar_task_handle);
+	xTaskCreate(Medir, "Medir aceleraciones", 4096, NULL, 5, &medir_task_handle);
+	xTaskCreate(Mostrar, "Mostrar pitch y roll", 4096, NULL, 5, &mostrar_task_handle);
 
-	// TimerStart(TIMER_A);
+	TimerStart(TIMER_A);
 	// TimerStart(TIMER_B);
 
 	
