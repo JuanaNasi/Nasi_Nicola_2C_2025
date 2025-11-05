@@ -20,6 +20,7 @@
  * | 22/10/2025 | Creación del documento	                     |
  * | 29/10/2025 | Terminación de cálculo de ángulos	             |
  * | 04/11/2025 | Cambio de VTaskDelay por Timers	             |
+ * | 05/11/2025 | Implementacion correcta de Timers	             |
  *
  * @author Juana Nasi (juananasi3009@gmail.com)
  * @author Josefina Nicola (josefina.nicola@ingenieria.uner.edu.ar)
@@ -38,7 +39,7 @@
 
 #define MEDICION_PERIODO_US 10000
 #define MUESTREO_PERIODO_US 1000000
-#define n 4 
+#define N_MUESTRAS 4 
 
 /*==================[internal data declaration]==============================*/
 
@@ -67,7 +68,6 @@ float z_prom;
 
 void FuncTimer(void *param){
     vTaskNotifyGiveFromISR(medir_task_handle, pdFALSE);
-	//vTaskNotifyGiveFromISR(mostrar_task_handle, pdFALSE);
 }
 
 void Medir(void *param){
@@ -78,13 +78,13 @@ void Medir(void *param){
 		z_prom = 0;
 		
 		
-		for (int i = 0; i < n; i++){
-			x_prom += ReadXValue()/n;
-			y_prom += ReadYValue()/n;
-			z_prom += ReadZValue()/n;
+		for (int i = 0; i < N_MUESTRAS; i++){
+			x_prom += ReadXValue()/N_MUESTRAS;
+			y_prom += ReadYValue()/N_MUESTRAS;
+			z_prom += ReadZValue()/N_MUESTRAS;
 			vTaskDelay(10 / portTICK_PERIOD_MS);
 		}		
-		vTaskNotifyGiveFromISR(mostrar_task_handle, pdFALSE);
+		xTaskNotifyGive(mostrar_task_handle);
 	}
 	
 	
@@ -92,8 +92,6 @@ void Medir(void *param){
 
 void Mostrar(void *param){
 	while(1){
-
-		
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 
 		float pitch = CalcularPitch(x_prom, y_prom, z_prom);
@@ -138,20 +136,10 @@ void app_main(void)
     };
 	TimerInit(&timer_medicion);
 
-	// timer_config_t timer_muestreo = {
-    //     .timer = TIMER_B,
-    //     .period = (MUESTREO_PERIODO_US-MEDICION_PERIODO_US*n), //Deja un total de 1 segundo teniendo en cuenta el tiempo de medición
-    //     .func_p = FuncTimer,
-    //     .param_p = NULL
-    // };
-	// TimerInit(&timer_muestreo);
-
 	xTaskCreate(Medir, "Medir aceleraciones", 4096, NULL, 5, &medir_task_handle);
 	xTaskCreate(Mostrar, "Mostrar pitch y roll", 4096, NULL, 5, &mostrar_task_handle);
 
 	TimerStart(TIMER_A);
-	// TimerStart(TIMER_B);
-
 	
 }
 /*==================[end of file]============================================*/
