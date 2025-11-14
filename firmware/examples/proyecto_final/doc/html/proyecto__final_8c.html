@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Final: Referencia del archivo C:/Users/USUARIO/Documents/ElectronicaProgramable/Nasi_Nicola_2C_2025/firmware/examples/proyecto_final/main/proyecto_final.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Final<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('proyecto__final_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo proyecto_final.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;ADXL335.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="l293_8h_source.html">l293.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pwm__mcu_8h_source.html">pwm_mcu.h</a>&quot;</code><br />
+</div>
+<p><a href="proyecto__final_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ae5ffd0d5a3a0b3e16f0910df73e4f06c" id="r_ae5ffd0d5a3a0b3e16f0910df73e4f06c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5ffd0d5a3a0b3e16f0910df73e4f06c">MUESTREO_PERIODO_US</a>&#160;&#160;&#160;1000000</td></tr>
+<tr class="memdesc:ae5ffd0d5a3a0b3e16f0910df73e4f06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor del período de muestreo en microsegundos.  <br /></td></tr>
+<tr class="memitem:a9f847a95b36b7947b5ebaad5a57ce852" id="r_a9f847a95b36b7947b5ebaad5a57ce852"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f847a95b36b7947b5ebaad5a57ce852">N_MUESTRAS</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a9f847a95b36b7947b5ebaad5a57ce852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor de la cantidad de muestras a tomar para la reducción del ruido eléctrico.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a1ef7ddf9c8f9fae49072210f6e257416" id="r_a1ef7ddf9c8f9fae49072210f6e257416"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ef7ddf9c8f9fae49072210f6e257416">CalcularPitch</a> (float x, float y, float z)</td></tr>
+<tr class="memdesc:a1ef7ddf9c8f9fae49072210f6e257416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula el ángulo pitch.  <br /></td></tr>
+<tr class="memitem:a0a6fad77423d4ce814c9593224dd0efe" id="r_a0a6fad77423d4ce814c9593224dd0efe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a6fad77423d4ce814c9593224dd0efe">CalcularRoll</a> (float x, float y, float z)</td></tr>
+<tr class="memdesc:a0a6fad77423d4ce814c9593224dd0efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula el ángulo roll.  <br /></td></tr>
+<tr class="memitem:a60a284916205957c66157e687debacfe" id="r_a60a284916205957c66157e687debacfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60a284916205957c66157e687debacfe">Vibrar</a> (float pitch, float roll)</td></tr>
+<tr class="memdesc:a60a284916205957c66157e687debacfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la desviación entre los valores de pitch y roll actuales y los valores estándar. Envía una vibración si la desviación es significativa durante más de 20 segundos.  <br /></td></tr>
+<tr class="memitem:ad9278972624167025b4b2910afc9765e" id="r_ad9278972624167025b4b2910afc9765e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9278972624167025b4b2910afc9765e">FuncTimer</a> (void *param)</td></tr>
+<tr class="memdesc:ad9278972624167025b4b2910afc9765e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envía notificaciones a la tarea asociada a Medir.  <br /></td></tr>
+<tr class="memitem:a2e40f9db88c639724118a25709c0d183" id="r_a2e40f9db88c639724118a25709c0d183"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e40f9db88c639724118a25709c0d183">Medir</a> (void *param)</td></tr>
+<tr class="memdesc:a2e40f9db88c639724118a25709c0d183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene los valores de aceleración del acelerómetro y cálcula un promedio de N_MUESTRAS de las medidas para reducir el ruido eléctrico.  <br /></td></tr>
+<tr class="memitem:a43b0b39cb1b1c3aaf52dcda7c15fecc9" id="r_a43b0b39cb1b1c3aaf52dcda7c15fecc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43b0b39cb1b1c3aaf52dcda7c15fecc9">Mostrar</a> (void *param)</td></tr>
+<tr class="memdesc:a43b0b39cb1b1c3aaf52dcda7c15fecc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se encarga de calcular pitch y roll, los muestra por consola y se los pasa a la función <a class="el" href="#a60a284916205957c66157e687debacfe" title="Calcula la desviación entre los valores de pitch y roll actuales y los valores estándar....">Vibrar()</a>  <br /></td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2b0cb40d7a31ce7e8b3f906fd55df312" id="r_a2b0cb40d7a31ce7e8b3f906fd55df312"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b0cb40d7a31ce7e8b3f906fd55df312">medir_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:a1316d5b1a3e4d9dee5085faf3b582e40" id="r_a1316d5b1a3e4d9dee5085faf3b582e40"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1316d5b1a3e4d9dee5085faf3b582e40">mostrar_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:a6da683cab7b9deadab496fb16abd2657" id="r_a6da683cab7b9deadab496fb16abd2657"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6da683cab7b9deadab496fb16abd2657">x_prom</a></td></tr>
+<tr class="memitem:a37b15041678db914c2db900cbb63c148" id="r_a37b15041678db914c2db900cbb63c148"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37b15041678db914c2db900cbb63c148">y_prom</a></td></tr>
+<tr class="memitem:add3b4dd1d511265ef0219b63ad7e0fdf" id="r_add3b4dd1d511265ef0219b63ad7e0fdf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add3b4dd1d511265ef0219b63ad7e0fdf">z_prom</a></td></tr>
+<tr class="memitem:a961800bf60ff693820efbf7f4bc72788" id="r_a961800bf60ff693820efbf7f4bc72788"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a961800bf60ff693820efbf7f4bc72788">cont</a> = 0</td></tr>
+<tr class="memitem:ac3dfc2ac037c85fc797f83b60a153b2b" id="r_ac3dfc2ac037c85fc797f83b60a153b2b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3dfc2ac037c85fc797f83b60a153b2b">pitch_ref</a> = 0</td></tr>
+<tr class="memitem:a5501ac25d0118d1f30afdb93c7ecbea7" id="r_a5501ac25d0118d1f30afdb93c7ecbea7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5501ac25d0118d1f30afdb93c7ecbea7">roll_ref</a> = 0</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="ae5ffd0d5a3a0b3e16f0910df73e4f06c" name="ae5ffd0d5a3a0b3e16f0910df73e4f06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ffd0d5a3a0b3e16f0910df73e4f06c">&#9670;&#160;</a></span>MUESTREO_PERIODO_US</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MUESTREO_PERIODO_US&#160;&#160;&#160;1000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor del período de muestreo en microsegundos. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00059">59</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a9f847a95b36b7947b5ebaad5a57ce852" name="a9f847a95b36b7947b5ebaad5a57ce852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f847a95b36b7947b5ebaad5a57ce852">&#9670;&#160;</a></span>N_MUESTRAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N_MUESTRAS&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor de la cantidad de muestras a tomar para la reducción del ruido eléctrico. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00064">64</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a> y <a class="el" href="proyecto__final_8c_source.html#l00105">Medir()</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00194">194</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="proyecto__final_8c_source.html#l00173">CalcularPitch()</a>, <a class="el" href="proyecto__final_8c_source.html#l00186">CalcularRoll()</a>, <a class="el" href="proyecto__final_8c_source.html#l00097">FuncTimer()</a>, <a class="el" href="l293_8c_source.html#l00040">L293Init()</a>, <a class="el" href="proyecto__final_8c_source.html#l00105">Medir()</a>, <a class="el" href="proyecto__final_8c_source.html#l00068">medir_task_handle</a>, <a class="el" href="proyecto__final_8c_source.html#l00126">Mostrar()</a>, <a class="el" href="proyecto__final_8c_source.html#l00069">mostrar_task_handle</a>, <a class="el" href="proyecto__final_8c_source.html#l00059">MUESTREO_PERIODO_US</a>, <a class="el" href="proyecto__final_8c_source.html#l00064">N_MUESTRAS</a>, <a class="el" href="ili9341_8c_source.html#l00019">NULL</a>, <a class="el" href="proyecto__final_8c_source.html#l00085">pitch_ref</a>, <a class="el" href="proyecto__final_8c_source.html#l00086">roll_ref</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8c_source.html#l00067">TimerInit()</a>, <a class="el" href="timer__mcu_8c_source.html#l00116">TimerStart()</a>, <a class="el" href="proyecto__final_8c_source.html#l00079">x_prom</a>, <a class="el" href="proyecto__final_8c_source.html#l00080">y_prom</a> y <a class="el" href="proyecto__final_8c_source.html#l00081">z_prom</a>.</p>
+
+</div>
+</div>
+<a id="a1ef7ddf9c8f9fae49072210f6e257416" name="a1ef7ddf9c8f9fae49072210f6e257416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef7ddf9c8f9fae49072210f6e257416">&#9670;&#160;</a></span>CalcularPitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CalcularPitch </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula el ángulo pitch. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Aceleración en el eje x </td></tr>
+    <tr><td class="paramname">y</td><td>Aceleración en el eje y </td></tr>
+    <tr><td class="paramname">z</td><td>Aceleración en el eje z </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Flotante que almacena el valor de pitch </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00173">173</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a> y <a class="el" href="proyecto__final_8c_source.html#l00126">Mostrar()</a>.</p>
+
+</div>
+</div>
+<a id="a0a6fad77423d4ce814c9593224dd0efe" name="a0a6fad77423d4ce814c9593224dd0efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6fad77423d4ce814c9593224dd0efe">&#9670;&#160;</a></span>CalcularRoll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CalcularRoll </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula el ángulo roll. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Aceleración en el eje x </td></tr>
+    <tr><td class="paramname">y</td><td>Aceleración en el eje y </td></tr>
+    <tr><td class="paramname">z</td><td>Aceleración en el eje z </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Flotante que almacena el valor de roll </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00186">186</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a> y <a class="el" href="proyecto__final_8c_source.html#l00126">Mostrar()</a>.</p>
+
+</div>
+</div>
+<a id="ad9278972624167025b4b2910afc9765e" name="ad9278972624167025b4b2910afc9765e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9278972624167025b4b2910afc9765e">&#9670;&#160;</a></span>FuncTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimer </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envía notificaciones a la tarea asociada a Medir. </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00097">97</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="proyecto__final_8c_source.html#l00068">medir_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a2e40f9db88c639724118a25709c0d183" name="a2e40f9db88c639724118a25709c0d183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e40f9db88c639724118a25709c0d183">&#9670;&#160;</a></span>Medir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Medir </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene los valores de aceleración del acelerómetro y cálcula un promedio de N_MUESTRAS de las medidas para reducir el ruido eléctrico. </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00105">105</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="proyecto__final_8c_source.html#l00069">mostrar_task_handle</a>, <a class="el" href="proyecto__final_8c_source.html#l00064">N_MUESTRAS</a>, <a class="el" href="proyecto__final_8c_source.html#l00079">x_prom</a>, <a class="el" href="proyecto__final_8c_source.html#l00080">y_prom</a> y <a class="el" href="proyecto__final_8c_source.html#l00081">z_prom</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a43b0b39cb1b1c3aaf52dcda7c15fecc9" name="a43b0b39cb1b1c3aaf52dcda7c15fecc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b0b39cb1b1c3aaf52dcda7c15fecc9">&#9670;&#160;</a></span>Mostrar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mostrar </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Se encarga de calcular pitch y roll, los muestra por consola y se los pasa a la función <a class="el" href="#a60a284916205957c66157e687debacfe" title="Calcula la desviación entre los valores de pitch y roll actuales y los valores estándar....">Vibrar()</a> </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00126">126</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="proyecto__final_8c_source.html#l00173">CalcularPitch()</a>, <a class="el" href="proyecto__final_8c_source.html#l00186">CalcularRoll()</a>, <a class="el" href="proyecto__final_8c_source.html#l00150">Vibrar()</a>, <a class="el" href="proyecto__final_8c_source.html#l00079">x_prom</a>, <a class="el" href="proyecto__final_8c_source.html#l00080">y_prom</a> y <a class="el" href="proyecto__final_8c_source.html#l00081">z_prom</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a60a284916205957c66157e687debacfe" name="a60a284916205957c66157e687debacfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a284916205957c66157e687debacfe">&#9670;&#160;</a></span>Vibrar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vibrar </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>roll</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula la desviación entre los valores de pitch y roll actuales y los valores estándar. Envía una vibración si la desviación es significativa durante más de 20 segundos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pitch</td><td>Flotante que almacena el ángulo pitch </td></tr>
+    <tr><td class="paramname">roll</td><td>Flotante que almacena el ángulo roll </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00150">150</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="proyecto__final_8c_source.html#l00083">cont</a>, <a class="el" href="l293_8c_source.html#l00051">L293SetSpeed()</a>, <a class="el" href="l293_8h_source.html#l00049">MOTOR_2</a>, <a class="el" href="proyecto__final_8c_source.html#l00085">pitch_ref</a> y <a class="el" href="proyecto__final_8c_source.html#l00086">roll_ref</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00126">Mostrar()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a961800bf60ff693820efbf7f4bc72788" name="a961800bf60ff693820efbf7f4bc72788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961800bf60ff693820efbf7f4bc72788">&#9670;&#160;</a></span>cont</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cont = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00083">83</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00150">Vibrar()</a>.</p>
+
+</div>
+</div>
+<a id="a2b0cb40d7a31ce7e8b3f906fd55df312" name="a2b0cb40d7a31ce7e8b3f906fd55df312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b0cb40d7a31ce7e8b3f906fd55df312">&#9670;&#160;</a></span>medir_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t medir_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00068">68</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a> y <a class="el" href="proyecto__final_8c_source.html#l00097">FuncTimer()</a>.</p>
+
+</div>
+</div>
+<a id="a1316d5b1a3e4d9dee5085faf3b582e40" name="a1316d5b1a3e4d9dee5085faf3b582e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1316d5b1a3e4d9dee5085faf3b582e40">&#9670;&#160;</a></span>mostrar_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t mostrar_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00069">69</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a> y <a class="el" href="proyecto__final_8c_source.html#l00105">Medir()</a>.</p>
+
+</div>
+</div>
+<a id="ac3dfc2ac037c85fc797f83b60a153b2b" name="ac3dfc2ac037c85fc797f83b60a153b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3dfc2ac037c85fc797f83b60a153b2b">&#9670;&#160;</a></span>pitch_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float pitch_ref = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00085">85</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a> y <a class="el" href="proyecto__final_8c_source.html#l00150">Vibrar()</a>.</p>
+
+</div>
+</div>
+<a id="a5501ac25d0118d1f30afdb93c7ecbea7" name="a5501ac25d0118d1f30afdb93c7ecbea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5501ac25d0118d1f30afdb93c7ecbea7">&#9670;&#160;</a></span>roll_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float roll_ref = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00086">86</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a> y <a class="el" href="proyecto__final_8c_source.html#l00150">Vibrar()</a>.</p>
+
+</div>
+</div>
+<a id="a6da683cab7b9deadab496fb16abd2657" name="a6da683cab7b9deadab496fb16abd2657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6da683cab7b9deadab496fb16abd2657">&#9670;&#160;</a></span>x_prom</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float x_prom</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00079">79</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a>, <a class="el" href="proyecto__final_8c_source.html#l00105">Medir()</a> y <a class="el" href="proyecto__final_8c_source.html#l00126">Mostrar()</a>.</p>
+
+</div>
+</div>
+<a id="a37b15041678db914c2db900cbb63c148" name="a37b15041678db914c2db900cbb63c148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37b15041678db914c2db900cbb63c148">&#9670;&#160;</a></span>y_prom</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float y_prom</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00080">80</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a>, <a class="el" href="proyecto__final_8c_source.html#l00105">Medir()</a> y <a class="el" href="proyecto__final_8c_source.html#l00126">Mostrar()</a>.</p>
+
+</div>
+</div>
+<a id="add3b4dd1d511265ef0219b63ad7e0fdf" name="add3b4dd1d511265ef0219b63ad7e0fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3b4dd1d511265ef0219b63ad7e0fdf">&#9670;&#160;</a></span>z_prom</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float z_prom</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="proyecto__final_8c_source.html#l00081">81</a> del archivo <a class="el" href="proyecto__final_8c_source.html">proyecto_final.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="proyecto__final_8c_source.html#l00194">app_main()</a>, <a class="el" href="proyecto__final_8c_source.html#l00105">Medir()</a> y <a class="el" href="proyecto__final_8c_source.html#l00126">Mostrar()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_2e2540cd5af4b6cb56a3b4d7a746067b.html">Nasi_Nicola_2C_2025</a></li><li class="navelem"><a href="dir_8a9ac07814032a1b98de4c2a47e99546.html">firmware</a></li><li class="navelem"><a href="dir_7071323eb37e9f3258fcd6d12e2fd162.html">examples</a></li><li class="navelem"><a href="dir_c475d773b799a0ac9f5a8752376f61dc.html">proyecto_final</a></li><li class="navelem"><a href="dir_97bf1b4b00d3dcaabf1994bfbf4c11f4.html">main</a></li><li class="navelem"><a href="proyecto__final_8c.html">proyecto_final.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

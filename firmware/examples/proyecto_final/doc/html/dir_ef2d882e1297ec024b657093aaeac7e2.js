@@ -1,0 +1,4 @@
+var dir_ef2d882e1297ec024b657093aaeac7e2 =
+[
+    [ "CMakeCCompilerId.c", "_nasi___nicola__2_c__2025_2firmware_2examples_2proyecto__final_2build_2_c_make_files_23_830_82_2b1d2a1d2bef47bc06d516c2e42b6adf1.html", "_nasi___nicola__2_c__2025_2firmware_2examples_2proyecto__final_2build_2_c_make_files_23_830_82_2b1d2a1d2bef47bc06d516c2e42b6adf1" ]
+];

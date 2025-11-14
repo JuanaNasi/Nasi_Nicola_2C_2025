@@ -1,0 +1,4 @@
+var dir_871afbc363cd10addfd43bc800ae0af5 =
+[
+    [ "CMakeCXXCompilerId.cpp", "_nasi___nicola__2_c__2025_2firmware_2examples_2proyecto__final_2build_2_c_make_files_23_830_82_2bb56d40145584797530b08794539dce1.html", "_nasi___nicola__2_c__2025_2firmware_2examples_2proyecto__final_2build_2_c_make_files_23_830_82_2bb56d40145584797530b08794539dce1" ]
+];
